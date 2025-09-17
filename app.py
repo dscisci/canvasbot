@@ -19,7 +19,7 @@ except ImportError:
 
 app = Flask(__name__)
 
-GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-pro")
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.0-flash")
 
 
 def _ensure_gemini_configured() -> None:

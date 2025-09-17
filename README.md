@@ -6,7 +6,7 @@ A minimal Python web app that provides a mobile-friendly chat interface backed b
 
 - macOS, Linux, or Windows
 - Python 3.9+
-- A Google AI Studio API key with access to a Gemini chat-capable model (e.g., `gemini-pro`)
+- A Google AI Studio API key with access to a Gemini chat-capable model (e.g., `gemini-2.0-flash`)
 
 ### Installing Python and pip on macOS with Homebrew
 
@@ -44,14 +44,14 @@ A minimal Python web app that provides a mobile-friendly chat interface backed b
    pip install -r requirements.txt
    ```
 4. **Create a Google AI Studio API key**
-   - Visit <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener">https://aistudio.google.com/app/apikey</a>
+   - Visit <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener noreferrer">https://aistudio.google.com/app/apikey</a>
    - Generate a key and copy it (you can revoke or rotate later).
 5. **Add your Gemini API key**
    ```bash
    cp .env.example .env
    ```
    - Open the new `.env` file in your editor and replace `your-gemini-api-key` with the key you created earlier.
-   - Adjust `GEMINI_MODEL` if you want to use a different Gemini model (otherwise leave the default).
+   - Leave `GEMINI_MODEL` as `gemini-2.0-flash` unless you've enabled and prefer another Gemini model.
    The included `python-dotenv` dependency loads this file automatically on startup.
 6. **Run the development server**
    ```bash
