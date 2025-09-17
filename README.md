@@ -4,14 +4,34 @@ A minimal Python web app that provides a mobile-friendly chat interface backed b
 
 ## Prerequisites
 
+- macOS, Linux, or Windows
 - Python 3.9+
 - A Google AI Studio API key with access to a Gemini chat-capable model (e.g., `gemini-pro`)
+
+### Installing Python and pip on macOS with Homebrew
+
+1. Install [Homebrew](https://brew.sh/) if you do not already have it.
+2. Verify whether Python is already available:
+   ```bash
+   python3 --version
+   pip3 --version
+   ```
+3. If either command fails, install Python (which includes pip) via Homebrew:
+   ```bash
+   brew update
+   brew install python
+   ```
+4. Open a new terminal (or reload your shell) and confirm the installation again:
+   ```bash
+   python3 --version
+   pip3 --version
+   ```
 
 ## Step-by-step setup
 
 1. **Clone the repository**
    ```bash
-   git clone <your-fork-url>
+   git clone https://github.com/mcough2/chatbox-example.git
    cd chatbox-example
    ```
 2. **Create and activate a virtual environment** (recommended)
@@ -24,20 +44,15 @@ A minimal Python web app that provides a mobile-friendly chat interface backed b
    pip install -r requirements.txt
    ```
 4. **Create a Google AI Studio API key**
-   - Visit [https://aistudio.google.com/app/apikey](https://aistudio.google.com/app/apikey)
+   - Visit <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener">https://aistudio.google.com/app/apikey</a>
    - Generate a key and copy it (you can revoke or rotate later).
-5. **Provide your credentials to the app**
-   - Option A: export environment variables in your shell
-     ```bash
-     export GEMINI_API_KEY="your-gemini-api-key"
-     export GEMINI_MODEL="gemini-pro"  # optional override
-     ```
-   - Option B: create a `.env` file in the project root
-     ```bash
-     GEMINI_API_KEY=your-gemini-api-key
-     GEMINI_MODEL=gemini-pro  # optional
-     ```
-     The included `python-dotenv` dependency loads this file automatically on startup.
+5. **Add your Gemini API key**
+   ```bash
+   cp .env.example .env
+   ```
+   - Open the new `.env` file in your editor and replace `your-gemini-api-key` with the key you created earlier.
+   - Adjust `GEMINI_MODEL` if you want to use a different Gemini model (otherwise leave the default).
+   The included `python-dotenv` dependency loads this file automatically on startup.
 6. **Run the development server**
    ```bash
    flask --app app run
