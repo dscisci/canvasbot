@@ -36,8 +36,8 @@ A minimal Python web app that provides a mobile-friendly chat interface backed b
    ```
 2. **Create and activate a virtual environment** (recommended)
    ```bash
-   python -m venv .venv
-   source .venv/bin/activate  # On Windows use .venv\Scripts\activate
+   python3 -m venv .venv  # On Windows use: py -3 -m venv .venv
+   source .venv/bin/activate
    ```
 3. **Install project dependencies**
    ```bash
@@ -56,7 +56,7 @@ A minimal Python web app that provides a mobile-friendly chat interface backed b
 6. **Run the development server**
    ```bash
    flask --app app run
-   # or: python app.py
+   # or: python app.py  # inside the virtualenv `python` points to Python 3
    ```
 7. **Open the app in your browser**
    - Navigate to [http://localhost:5000](http://localhost:5000)
