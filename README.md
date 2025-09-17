@@ -36,7 +36,7 @@ A minimal Python web app that provides a mobile-friendly chat interface backed b
    ```
 2. **Create and activate a virtual environment** (recommended)
    ```bash
-   python3 -m venv .venv  # On Windows use: py -3 -m venv .venv
+   python3 -m venv .venv
    source .venv/bin/activate
    ```
 3. **Install project dependencies**
