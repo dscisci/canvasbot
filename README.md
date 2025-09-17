@@ -1,4 +1,4 @@
-# Chatbox Example
+# Chatbot Example
 
 A minimal Python web app that provides a mobile-friendly chat interface backed by Google Gemini. Built with Flask and vanilla HTML/CSS/JS with streaming responses.
 
@@ -31,8 +31,8 @@ A minimal Python web app that provides a mobile-friendly chat interface backed b
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/mcough2/chatbox-example.git
-   cd chatbox-example
+   git clone https://github.com/mcough2/chatbox-example.git chatbot-example
+   cd chatbot-example
    ```
 2. **Create and activate a virtual environment** (recommended)
    ```bash
