@@ -51,6 +51,8 @@ A minimal Python web app that provides a mobile-friendly chat interface backed b
    cp .env.example .env
    ```
    - Open the new `.env` file in your editor and replace `your-gemini-api-key` with the key you created earlier.
+     - On macOS you can run `open .env` to edit it with TextEdit from the terminal.
+   - Save the changes after updating the file.
    - Leave `GEMINI_MODEL` as `gemini-2.0-flash` unless you've enabled and prefer another Gemini model.
    The included `python-dotenv` dependency loads this file automatically on startup.
 6. **Run the development server**
@@ -59,7 +61,7 @@ A minimal Python web app that provides a mobile-friendly chat interface backed b
    # or: python app.py  # inside the virtualenv `python` points to Python 3
    ```
 7. **Open the app in your browser**
-   - Navigate to [http://localhost:5000](http://localhost:5000)
+   - Navigate to [http://127.0.0.1:5000](http://127.0.0.1:5000)
    - Type a message and watch Gemini stream back its response live.
 
 ## How it works
