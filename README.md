@@ -10,18 +10,28 @@ A minimal Python web app that provides a mobile-friendly chat interface backed b
 
 ### Installing Python and pip on macOS with Homebrew
 
-1. Install [Homebrew](https://brew.sh/) if you do not already have it.
-2. Verify whether Python is already available:
+1. Install Apple Command Line Tools (required by Homebrew)
+   ```bash
+   xcode-select --install
+   ```
+   - If they are already installed, you'll see a message indicating so. You can verify with:
+     ```bash
+     xcode-select -p
+     ```
+     which should print a path like `/Library/Developer/CommandLineTools`.
+
+2. Install [Homebrew](https://brew.sh/) if you do not already have it.
+3. Verify whether Python is already available:
    ```bash
    python3 --version
    pip3 --version
    ```
-3. If either command fails, install Python (which includes pip) via Homebrew:
+4. If either command fails, install Python (which includes pip) via Homebrew:
    ```bash
    brew update
    brew install python
    ```
-4. Open a new terminal (or reload your shell) and confirm the installation again:
+5. Open a new terminal (or reload your shell) and confirm the installation again:
    ```bash
    python3 --version
    pip3 --version
