@@ -4,24 +4,121 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chatbot Example</title>
+    <title>FlexWave - Mobile Banking</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
   </head>
   <body>
-    <div class="app">
-      <header class="app__header">Chatbot Example</header>
-      <main class="chat" id="chatLog"></main>
-      <form class="composer" id="chatForm">
-        <textarea
-          id="chatInput"
-          name="message"
-          rows="1"
-          placeholder="Ask something..."
-          autocomplete="off"
-          required
-        ></textarea>
-        <button type="submit" id="sendButton">Send</button>
-      </form>
+    <div class="mobile-app">
+      <!-- Header -->
+      <header class="header">
+        <button class="menu-btn">☰</button>
+        <div class="logo">
+          <span class="logo-icon">◆</span>
+          <span class="logo-text">FlexWave</span>
+        </div>
+        <button class="notification-btn">🔔</button>
+        <div class="profile-btn">JD</div>
+      </header>
+
+      <!-- Main Content -->
+      <main class="main-content" id="mainContent">
+        <!-- Balance Card -->
+        <div class="balance-card">
+          <div class="balance-header">
+            <div>
+              <div class="bank-name">First National Bank</div>
+              <div class="account-number">•••• 8742</div>
+            </div>
+            <button class="switch-btn">Switch</button>
+          </div>
+          <div class="balance-amount">$2,406.75</div>
+          <div class="balance-label">Available Balance</div>
+        </div>
+
+        <!-- Quick Actions -->
+        <section class="section">
+          <h2 class="section-title">Quick Actions</h2>
+          <div class="quick-actions">
+            <button class="action-card">
+              <div class="action-icon">↗</div>
+              <div class="action-title">Send Money</div>
+              <div class="action-subtitle">Transfer funds</div>
+            </button>
+            <button class="action-card">
+              <div class="action-icon">$</div>
+              <div class="action-title">Request</div>
+              <div class="action-subtitle">Ask for payment</div>
+            </button>
+          </div>
+        </section>
+
+        <!-- Family Financial Status -->
+        <section class="section">
+          <h2 class="section-title">Family Financial Status</h2>
+          <div class="financial-status">
+            <div class="status-item">
+              <span>Total Family Savings</span>
+              <span class="status-amount">$15,139.80</span>
+            </div>
+            <div class="status-item">
+              <span>Kids' Total Balance</span>
+              <span class="status-amount">$282.75</span>
+            </div>
+            <div class="status-item">
+              <span>This Week's Kid Spending</span>
+              <span class="status-amount">$51.15</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Recent Activity -->
+        <section class="section">
+          <div class="section-header">
+            <h2 class="section-title">Recent Activity</h2>
+            <button class="view-all-btn">View All</button>
+          </div>
+        </section>
+      </main>
+
+      <!-- Bottom Navigation -->
+      <nav class="bottom-nav">
+        <button type="button" class="nav-item active">
+          <span class="nav-icon">🏠</span>
+          <span class="nav-label">Home</span>
+        </button>
+        <button type="button" class="nav-item">
+          <span class="nav-icon">💳</span>
+          <span class="nav-label">Cards</span>
+        </button>
+        <button type="button" class="nav-item">
+          <span class="nav-icon">📊</span>
+          <span class="nav-label">Analytics</span>
+        </button>
+        <button type="button" class="nav-item" id="assistantTab">
+          <span class="nav-icon">💬</span>
+          <span class="nav-label">Assistant</span>
+        </button>
+      </nav>
+
+      <!-- Chat Overlay -->
+      <div class="chat-overlay" id="chatOverlay">
+        <div class="chat-header">
+          <h3>AI Assistant</h3>
+          <button type="button" class="close-chat-btn" id="closeChatBtn">×</button>
+        </div>
+        <div class="chat" id="chatLog"></div>
+        <form class="composer" id="chatForm">
+          <textarea
+            id="chatInput"
+            name="message"
+            rows="1"
+            placeholder="Ask about your finances..."
+            autocomplete="off"
+            required
+          ></textarea>
+          <button type="submit" id="sendButton">Send</button>
+        </form>
+      </div>
     </div>
 
     <template id="messageTemplate">

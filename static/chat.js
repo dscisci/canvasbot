@@ -3,8 +3,21 @@ const chatForm = document.getElementById("chatForm");
 const chatInput = document.getElementById("chatInput");
 const sendButton = document.getElementById("sendButton");
 const messageTemplate = document.getElementById("messageTemplate");
+const chatOverlay = document.getElementById("chatOverlay");
+const assistantTab = document.getElementById("assistantTab");
+const closeChatBtn = document.getElementById("closeChatBtn");
 
 const conversation = [];
+
+// Toggle chat overlay
+assistantTab.addEventListener("click", () => {
+  chatOverlay.classList.add("active");
+  setTimeout(() => chatInput.focus(), 100);
+});
+
+closeChatBtn.addEventListener("click", () => {
+  chatOverlay.classList.remove("active");
+});
 
 function appendMessage(role, content = "") {
   const fragment = messageTemplate.content.cloneNode(true);
@@ -161,8 +174,4 @@ chatForm.addEventListener("submit", (event) => {
 chatInput.addEventListener("input", () => {
   chatInput.style.height = "auto";
   chatInput.style.height = `${chatInput.scrollHeight}px`;
-});
-
-window.addEventListener("load", () => {
-  chatInput.focus();
 });
