@@ -1,9 +1,9 @@
-# Chatbot Example - Google Gemini Integration
+# FlexWave - Mobile Banking App Prototype with AI Assistant
 
 ## Overview
-A Flask-based chatbot web application that provides a mobile-friendly chat interface powered by Google's Gemini AI. The app features real-time streaming responses for a smooth conversational experience.
+A Flask-based mobile banking app prototype featuring an integrated AI assistant powered by Google's Gemini AI. The app presents a non-functional banking interface (FlexWave) with a fully functional AI chatbot accessible via the bottom navigation.
 
-**Current Status**: Fully functional and running locally on Replit
+**Current Status**: Fully functional prototype running locally on Replit
 
 ## Project Architecture
 
@@ -27,10 +27,12 @@ A Flask-based chatbot web application that provides a mobile-friendly chat inter
 ```
 
 ### How It Works
-1. **Frontend** (`static/chat.js`): Sends full conversation history to backend on each message
-2. **Backend** (`app.py`): Relays chat requests to Gemini API and streams responses back as NDJSON
-3. **Streaming**: Server sends incremental text chunks as they arrive from Gemini
-4. **UI Updates**: JavaScript updates the chat interface in real-time as chunks arrive
+1. **Mobile UI**: FlexWave banking app prototype with non-functional interface elements (balance cards, quick actions, family finances)
+2. **AI Assistant Access**: Click the "Assistant" tab in the bottom navigation to open the chat overlay
+3. **Chat Functionality** (`static/chat.js`): Sends full conversation history to backend on each message
+4. **Backend** (`app.py`): Relays chat requests to Gemini API and streams responses back as NDJSON
+5. **Streaming**: Server sends incremental text chunks as they arrive from Gemini
+6. **UI Updates**: JavaScript updates the chat interface in real-time as chunks arrive
 
 ## Recent Changes (October 8, 2025)
 1. Imported from GitHub repository (mcough2/chatbox-example)
@@ -38,6 +40,9 @@ A Flask-based chatbot web application that provides a mobile-friendly chat inter
 3. Added cache-control headers to prevent caching issues in Replit
 4. Set up Flask Server workflow on port 5000
 5. Added gunicorn to requirements.txt (for future production use if needed)
+6. Transformed simple chat interface into FlexWave mobile banking app prototype
+7. Integrated AI assistant as an overlay accessible via bottom navigation "Assistant" tab
+8. Designed mobile UI matching provided FlexWave banking app screenshot with purple theme
 
 ## Configuration
 
@@ -73,6 +78,8 @@ Core packages:
 
 ## User Preferences
 - **Purpose**: Local testing only, no deployment needed
+- **Design**: Mobile banking app prototype (FlexWave) with non-functional UI and integrated AI assistant
+- **UI/UX**: Purple theme matching provided screenshot, chatbot accessible via "Assistant" tab
 - **Testing**: Functional verification via screenshot and server logs
 
 ## API Information
