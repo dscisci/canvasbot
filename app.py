@@ -22,6 +22,15 @@ app = Flask(__name__)
 GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.0-flash")
 
 
+@app.after_request
+def add_header(response):
+    """Add headers to prevent caching for Replit iframe compatibility."""
+    response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
+    response.headers["Pragma"] = "no-cache"
+    response.headers["Expires"] = "0"
+    return response
+
+
 def _ensure_gemini_configured() -> None:
     api_key = os.getenv("GEMINI_API_KEY")
     if not api_key:
