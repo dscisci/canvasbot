@@ -41,7 +41,7 @@ A minimal Python web app that provides a mobile-friendly chat interface backed b
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/mcough2/chatbox-example.git canvasbot
+   git clone https://github.com/dscisci/canvasbot.git canvasbot
    cd canvasbot
    ```
 2. **Create and activate a virtual environment** (recommended)
